@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Taurvi/twitter-markov/issues"
   },
-  "homepage": "https://github.com/Taurvi/twitter-markov#readme"
+  "homepage": "https://github.com/Taurvi/twitter-markov#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
 }
