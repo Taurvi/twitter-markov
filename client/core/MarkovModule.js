@@ -9,7 +9,7 @@ var MarkovModule = angular.module('MarkovModule',
     ]);
 
 MarkovModule.factory('mySocket', ['socketFactory', function (socketFactory) {
-    var myIoSocket = io.connect('localhost:3000');
+    var myIoSocket = io.connect('http://54.202.37.114:3000');
     var mySocket = socketFactory({
         ioSocket: myIoSocket
     });
