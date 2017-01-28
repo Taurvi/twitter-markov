@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h1>Twitter Markov Generator</h1>
+            <br>
+            <h4>Using a selection of Trump's tweets as a source, this program will generate a (semi-legible) paragraph.</h4>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <button class="btn btn-lg btn-success btn-block" ng-disabled="loading" ng-click="generateParagraph()">
+                <span ng-if="!loading">GENERATE</span>
+                <span ng-if="loading"><i class="fa fa-refresh fa-spin"></i></span>
+            </button>
+        </div>
+    </div>
+    <br><br>
+    <div class="row" ng-if="drumpfParagraph">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="well">
+                {{drumpfParagraph}}
+            </div>
+        </div>
+    </div>
+</div>
