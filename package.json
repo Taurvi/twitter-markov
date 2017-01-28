@@ -1,0 +1,19 @@
+{
+  "name": "twitter-markov",
+  "version": "1.0.0",
+  "description": "Markov generator that will import from Twitter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taurvi/twitter-markov.git"
+  },
+  "author": "Stephen \"Taurvi\" Rimbakusumo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taurvi/twitter-markov/issues"
+  },
+  "homepage": "https://github.com/Taurvi/twitter-markov#readme"
+}
