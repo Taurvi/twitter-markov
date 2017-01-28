@@ -1,0 +1,35 @@
+{
+  "name": "twitter-markov",
+  "description": "Markov generator that will import from Twitter.",
+  "main": "index.js",
+  "authors": [
+    "Stephen \"Taurvi\" Rimbakusumo"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Taurvi/twitter-markov",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "angular-strap": "^2.3.10",
+    "angular-motion": "^0.4.4",
+    "angular-animate": "^1.6.0",
+    "components-font-awesome": "^4.7.0",
+    "socket.io-client": "^1.7.2",
+    "angular-socket-io": "^0.7.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.16.0",
+    "bootstrap-additions": "^0.3.1"
+  },
+  "resolutions": {
+    "angular": "1.6.0"
+  }
+}

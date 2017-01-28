@@ -12,22 +12,15 @@ var qReadFile = Q.denodeify(fs.readFile);
 var rawText = '';
 // Private helper functions
 var _isPunctuation = function (fragment) {
-    if (fragment) {
-        return fragment.match(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g);
-    }
+    return fragment.match(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g);
 };
 
 var _endsSentence = function (fragment) {
-    if (fragment) {
-        return fragment.match(/[.!?]/g);
-    }
+    return fragment.match(/[.!?]/g);
 }
 
 var _generateRandomInt = function (max, min) {
-    if (!min) {
-        min = 1;
-    }
-    return generateRandom.integer(min, max);
+    return generateRandom.integer(min || 1, max);
 };
 
 var _capitalizeFirstLetter = function (fragment) {
@@ -124,10 +117,11 @@ MarkovGenerator.prototype.generateSentence = function (cleanFrequencyDictionary,
 }
 
 MarkovGenerator.prototype.generateParagraph = function (cleanFrequencyDictionary, markovChain) {
-    var paragraphLength = _generateRandomInt(10, 4);
+    var paragraphLength = _generateRandomInt(12, 8);
     var paragraph = "";
     for (var sentenceNumber = 0; sentenceNumber < paragraphLength; sentenceNumber++) {
-        paragraph += " " + this.generateSentence(cleanFrequencyDictionary, markovChain);
+        var sentence = this.generateSentence(cleanFrequencyDictionary, markovChain);
+        paragraph += " " + sentence;
     }
     return paragraph;
 }

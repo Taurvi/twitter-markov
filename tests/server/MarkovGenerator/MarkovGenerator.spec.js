@@ -1,10 +1,6 @@
 var chai = require('chai');
-var chaiAsPromised = require("chai-as-promised");
-
-chai.use(chaiAsPromised);
 
 var expect = chai.expect;
-var assert = chai.assert;
 
 var MarkovGenerator = require('../../../server/MarkovGenerator/MarkovGenerator').MarkovGenerator;
 var generator = new MarkovGenerator();
@@ -127,7 +123,6 @@ describe('MarkovGenerator Tests', function () {
     describe('generateSentence', function () {
         it('should generate a sentence', function () {
             var readText = generator.readText(files.sampleLong);
-
             return readText.then(function (rawText) {
                 var rawFrequencyDictionary = generator.createFrequencyDictionary(rawText);
                 var markovChain = generator.createMarkovChain(rawFrequencyDictionary);
@@ -141,7 +136,6 @@ describe('MarkovGenerator Tests', function () {
     describe('generateParagraph', function () {
         it('should generate a paragraph', function () {
             var readText = generator.readText(files.sampleLong);
-
             return readText.then(function (rawText) {
                 var rawFrequencyDictionary = generator.createFrequencyDictionary(rawText);
                 var markovChain = generator.createMarkovChain(rawFrequencyDictionary);
