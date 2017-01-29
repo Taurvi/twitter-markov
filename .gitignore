@@ -3,6 +3,5 @@ bower_components/
 node_modules/
 html/
 npm-debug.log
-server/data/
 .DS_Store
 server/.DS_Store
